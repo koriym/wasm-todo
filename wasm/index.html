@@ -2,7 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>wasm-todo</title>
+    <style>
+        :root { color-scheme: light dark; }
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100dvh;
+            margin: 0;
+            background: #f5f5f2;
+            color: #71787f;
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { background: #16181a; color: #969ea5; }
+        }
+    </style>
 </head>
 <body>
     <p>Loading…</p>
