@@ -22,6 +22,11 @@ const php = new PhpCgiWorker85({
     prefix,
     exclude: [at('/index.html'), at('/app.phar')],
     sharedLibs: [phar, sqlite],
+    // A service worker process is disposable: a fetch event may wake a fresh
+    // one whose filesystem is empty. Preloading with the binary repopulates
+    // /index.php on every start, and request() awaits the binary, so no
+    // request can run before the phar is there.
+    files: [{ parent: '/', name: 'index.php', url: 'app.phar' }],
     ini: 'sys_temp_dir=/tmp\ndisplay_errors=0\n',
     env: {
         CONTEXT: 'prod-html-app',
@@ -30,21 +35,7 @@ const php = new PhpCgiWorker85({
     },
 });
 
-// Mount the phar as the CGI entrypoint. The worker's own fetch() bypasses its
-// fetch handler, so app.phar is served statically here. Done during install so
-// the entrypoint exists before the first fetch event.
-async function mountPhar() {
-    await php.binary;
-    const resp = await fetch('app.phar');
-    const bytes = new Uint8Array(await resp.arrayBuffer());
-    await php.writeFile('/index.php', bytes);
-}
-
-self.addEventListener('install', event => {
-    event.waitUntil(mountPhar().then(() => self.skipWaiting()));
-});
-self.addEventListener('activate', event => {
-    event.waitUntil(self.clients.claim());
-});
+self.addEventListener('install', event => event.waitUntil(self.skipWaiting()));
+self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', event => php.handleFetchEvent(event));
 self.addEventListener('message', event => php.handleMessageEvent(event));
