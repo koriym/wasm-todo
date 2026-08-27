@@ -55,7 +55,7 @@ class TodosTest extends TestCase
         $this->assertSame(200, $ro->code);
         $this->assertStringContainsString('name="_method" value="put"', (string) $ro);
         $this->assertStringContainsString('name="_method" value="delete"', (string) $ro);
-        $this->assertStringContainsString('status:</strong> pending', (string) $ro);
+        $this->assertStringContainsString('status</strong> pending', (string) $ro);
     }
 
     public function testToggleFlipsStatus(): void
@@ -64,7 +64,7 @@ class TodosTest extends TestCase
         $this->resource->put('page://self/todo', ['id' => 1]);
 
         $ro = $this->resource->get('page://self/todo', ['id' => 1]);
-        $this->assertStringContainsString('status:</strong> done', (string) $ro);
+        $this->assertStringContainsString('status</strong> done', (string) $ro);
     }
 
     public function testDeleteEmptiesList(): void

@@ -8,6 +8,7 @@ use BEAR\Resource\RenderInterface;
 use BEAR\Resource\ResourceObject;
 use Override;
 
+use function file_get_contents;
 use function htmlspecialchars;
 use function is_array;
 use function is_scalar;
@@ -67,10 +68,12 @@ final class HtmlRenderer implements RenderInterface
         $data = $body;
         unset($data['_links'], $data['_embedded']);
 
-        $html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Todos</title></head><body>';
+        $html = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+            . '<meta name="viewport" content="width=device-width, initial-scale=1">'
+            . '<title>Todos</title><style>' . self::css() . '</style></head><body><main>';
         $html .= $this->renderData($data);
         $html .= $this->renderLinks($links);
-        $html .= '</body></html>';
+        $html .= '</main></body></html>';
 
         return $html;
     }
@@ -92,7 +95,7 @@ final class HtmlRenderer implements RenderInterface
             return $this->renderList($key, $value);
         }
 
-        return sprintf('<p><strong>%s:</strong> %s</p>', $this->e($key), $this->e((string) $value));
+        return sprintf('<p><strong>%s</strong> %s</p>', $this->e($key), $this->e((string) $value));
     }
 
     /** @param array<mixed> $items */
@@ -187,5 +190,16 @@ final class HtmlRenderer implements RenderInterface
     private function e(string $value): string
     {
         return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    }
+
+    /** Inlined so every page is self-contained: no extra request, works offline inside the phar. */
+    private static function css(): string
+    {
+        static $css = '';
+        if ($css === '') {
+            $css = (string) file_get_contents(__DIR__ . '/style.css');
+        }
+
+        return $css;
     }
 }
