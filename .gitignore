@@ -1,0 +1,8 @@
+/vendor/
+/app.phar
+/autoload.php
+/preload.php
+/var/
+/.phpunit.result.cache
+/wasm/node_modules/
+/wasm/persist/
