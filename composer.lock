@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6271dfd116472c2697ee6b914a10b7bc",
+    "content-hash": "7d2668e4b18abf5bdecc4d40cf57d99c",
     "packages": [
         {
             "name": "aura/cli",
@@ -69,16 +69,16 @@
         },
         {
             "name": "bear/app-meta",
-            "version": "1.10.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.AppMeta.git",
-                "reference": "9f40a25b8cf35c3fae7f45f5a944282538a1d7cc"
+                "reference": "135c39834b6540950b4d52a9a7448624761bd22d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.AppMeta/zipball/9f40a25b8cf35c3fae7f45f5a944282538a1d7cc",
-                "reference": "9f40a25b8cf35c3fae7f45f5a944282538a1d7cc",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.AppMeta/zipball/135c39834b6540950b4d52a9a7448624761bd22d",
+                "reference": "135c39834b6540950b4d52a9a7448624761bd22d",
                 "shasum": ""
             },
             "require": {
@@ -115,31 +115,31 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.AppMeta/issues",
-                "source": "https://github.com/bearsunday/BEAR.AppMeta/tree/1.10.0"
+                "source": "https://github.com/bearsunday/BEAR.AppMeta/tree/1.14.0"
             },
-            "time": "2025-10-27T03:43:07+00:00"
+            "time": "2026-08-25T10:13:15+00:00"
         },
         {
             "name": "bear/package",
-            "version": "1.20.1",
+            "version": "1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Package.git",
-                "reference": "6ba08caf7fbd69e6e7245df68ee51ed9c29150d7"
+                "reference": "f766bd4fdf86631afba093f90dea669818fdcd26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/6ba08caf7fbd69e6e7245df68ee51ed9c29150d7",
-                "reference": "6ba08caf7fbd69e6e7245df68ee51ed9c29150d7",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Package/zipball/f766bd4fdf86631afba093f90dea669818fdcd26",
+                "reference": "f766bd4fdf86631afba093f90dea669818fdcd26",
                 "shasum": ""
             },
             "require": {
                 "aura/cli": "^2.2",
-                "bear/app-meta": "^1.9",
+                "bear/app-meta": "^1.14",
                 "bear/query-repository": "^1.13",
-                "bear/resource": "^1.27",
+                "bear/resource": "^1.31",
                 "bear/streamer": "^1.4",
-                "bear/sunday": "^1.8",
+                "bear/sunday": "^1.9",
                 "ext-hash": "*",
                 "koriym/http-constants": "^1.2",
                 "koriym/psr4list": "^1.3",
@@ -147,11 +147,11 @@
                 "php": "^8.2",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0",
                 "psr/log": "^1.1 || ^2.0 || ^3.0",
-                "ray/aop": "^2.19",
-                "ray/compiler": "^1.13",
-                "ray/di": "^2.19.3",
+                "ray/aop": "^2.20",
+                "ray/compiler": "^1.16",
+                "ray/di": "^2.23",
                 "ray/object-visual-grapher": "^1.0",
-                "ray/psr-cache-module": "^1.5.1",
+                "ray/psr-cache-module": "^1.5.2",
                 "symfony/cache": "^v6.4 || ^v7.2"
             },
             "require-dev": {
@@ -159,8 +159,7 @@
                 "phpunit/phpunit": "^11.0"
             },
             "bin": [
-                "bin/bear.compile",
-                "bin/bear.compile.php"
+                "bin/bear.compile"
             ],
             "type": "library",
             "extra": {
@@ -196,22 +195,22 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.Package/issues",
-                "source": "https://github.com/bearsunday/BEAR.Package/tree/1.20.1"
+                "source": "https://github.com/bearsunday/BEAR.Package/tree/1.24.1"
             },
-            "time": "2026-01-24T20:35:42+00:00"
+            "time": "2026-08-27T03:54:02+00:00"
         },
         {
             "name": "bear/query-repository",
-            "version": "1.15.0",
+            "version": "1.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.QueryRepository.git",
-                "reference": "8e4ab373b6eac7fe46a233262cbf79a61c589714"
+                "reference": "1ffef189a856f5a63f77f098c5ba888e150033f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.QueryRepository/zipball/8e4ab373b6eac7fe46a233262cbf79a61c589714",
-                "reference": "8e4ab373b6eac7fe46a233262cbf79a61c589714",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.QueryRepository/zipball/1ffef189a856f5a63f77f098c5ba888e150033f0",
+                "reference": "1ffef189a856f5a63f77f098c5ba888e150033f0",
                 "shasum": ""
             },
             "require": {
@@ -278,25 +277,26 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.QueryRepository/issues",
-                "source": "https://github.com/bearsunday/BEAR.QueryRepository/tree/1.15.0"
+                "source": "https://github.com/bearsunday/BEAR.QueryRepository/tree/1.16.2"
             },
-            "time": "2026-02-02T16:20:31+00:00"
+            "time": "2026-06-29T07:27:56+00:00"
         },
         {
             "name": "bear/resource",
-            "version": "1.31.0",
+            "version": "1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Resource.git",
-                "reference": "e1096794c95e2847209e10b3e439689a47744a4e"
+                "reference": "0797251f09bbb551d524f36b193ca934d3102d09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/e1096794c95e2847209e10b3e439689a47744a4e",
-                "reference": "e1096794c95e2847209e10b3e439689a47744a4e",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Resource/zipball/0797251f09bbb551d524f36b193ca934d3102d09",
+                "reference": "0797251f09bbb551d524f36b193ca934d3102d09",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "ext-curl": "*",
                 "ext-fileinfo": "*",
                 "ext-filter": "*",
@@ -309,8 +309,8 @@
                 "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "ray/aop": "^2.18.0",
                 "ray/di": "^2.18.0",
-                "ray/input-query": "^1.0",
-                "rize/uri-template": "^0.4"
+                "ray/input-query": "^1.1",
+                "rize/uri-template": "^0.4.1"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4",
@@ -360,9 +360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.Resource/issues",
-                "source": "https://github.com/bearsunday/BEAR.Resource/tree/1.31.0"
+                "source": "https://github.com/bearsunday/BEAR.Resource/tree/1.33.0"
             },
-            "time": "2026-02-02T17:54:23+00:00"
+            "time": "2026-06-20T22:08:37+00:00"
         },
         {
             "name": "bear/streamer",
@@ -424,20 +424,20 @@
         },
         {
             "name": "bear/sunday",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.Sunday.git",
-                "reference": "589bd9b2ac92311ece6b856691eff07575b81f7f"
+                "reference": "24b3b9ec78aec50182d53e200deb4b917f89154b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/589bd9b2ac92311ece6b856691eff07575b81f7f",
-                "reference": "589bd9b2ac92311ece6b856691eff07575b81f7f",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.Sunday/zipball/24b3b9ec78aec50182d53e200deb4b917f89154b",
+                "reference": "24b3b9ec78aec50182d53e200deb4b917f89154b",
                 "shasum": ""
             },
             "require": {
-                "bear/resource": "^1.16",
+                "bear/resource": "^1.33",
                 "php": "^8.2",
                 "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "ray/aop": "^2.12.3",
@@ -482,35 +482,35 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.Sunday/issues",
-                "source": "https://github.com/bearsunday/BEAR.Sunday/tree/1.8.0"
+                "source": "https://github.com/bearsunday/BEAR.Sunday/tree/1.9.0"
             },
-            "time": "2025-11-11T14:54:25+00:00"
+            "time": "2026-08-23T01:23:42+00:00"
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "phpunit/phpunit": "<=7.5 || >=13"
+                "phpunit/phpunit": "<=7.5 || >=14"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12 || ^13",
-                "phpstan/phpstan": "1.4.10 || 2.1.11",
+                "doctrine/coding-standard": "^9 || ^12 || ^14",
+                "phpstan/phpstan": "1.4.10 || 2.1.30",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12.4 || ^13.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
@@ -530,32 +530,33 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.6"
             },
-            "time": "2025-04-07T20:06:18+00:00"
+            "time": "2026-02-07T07:09:04+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "6.6.4",
+            "version": "6.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "2eeb75d21cf73211335888e7f5e6fd7440723ec7"
+                "reference": "7e420a943a6fbc95e60e3cf67acfbee85b3b4da7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/2eeb75d21cf73211335888e7f5e6fd7440723ec7",
-                "reference": "2eeb75d21cf73211335888e7f5e6fd7440723ec7",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
+                "reference": "7e420a943a6fbc95e60e3cf67acfbee85b3b4da7",
                 "shasum": ""
             },
             "require": {
+                "ext-filter": "*",
                 "ext-json": "*",
                 "marc-mabe/php-enum": "^4.4",
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "3.3.0",
-                "json-schema/json-schema-test-suite": "^23.2",
+                "json-schema/json-schema-test-suite": "dev-main",
                 "marc-mabe/php-enum-phpstan": "^2.0",
                 "phpspec/prophecy": "^1.19",
                 "phpstan/phpstan": "^1.12",
@@ -581,20 +582,9 @@
             ],
             "authors": [
                 {
-                    "name": "Bruno Prieto Reis",
-                    "email": "bruno.p.reis@gmail.com"
-                },
-                {
-                    "name": "Justin Rainbow",
-                    "email": "justin.rainbow@gmail.com"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
+                    "name": "Danny van der Sluijs",
+                    "email": "danny.vandersluijs@icloud.com",
+                    "role": "Maintainer"
                 }
             ],
             "description": "A library to validate a json schema.",
@@ -605,9 +595,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/6.6.4"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/6.11.0"
             },
-            "time": "2025-12-19T15:01:32+00:00"
+            "time": "2026-08-21T10:30:42+00:00"
         },
         {
             "name": "koriym/file-upload",
@@ -1075,16 +1065,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "6.0.1",
+            "version": "6.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "2f5cbed597cb261d1ea458f3da3a9ad32e670b1e"
+                "reference": "7bae67520aa9f5ecc506d646810bd40d9da54582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/2f5cbed597cb261d1ea458f3da3a9ad32e670b1e",
-                "reference": "2f5cbed597cb261d1ea458f3da3a9ad32e670b1e",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/7bae67520aa9f5ecc506d646810bd40d9da54582",
+                "reference": "7bae67520aa9f5ecc506d646810bd40d9da54582",
                 "shasum": ""
             },
             "require": {
@@ -1134,9 +1124,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/6.0.1"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/6.0.3"
             },
-            "time": "2026-01-20T15:30:42+00:00"
+            "time": "2026-03-18T20:49:53+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -1198,16 +1188,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a"
+                "reference": "fb19eedd2bb67ff8cf7a5502ad329e701d6398a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a004701b11273a26cd7955a61d67a7f1e525a45a",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
+                "reference": "fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
                 "shasum": ""
             },
             "require": {
@@ -1239,9 +1229,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.2"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.3"
             },
-            "time": "2026-01-25T14:56:51+00:00"
+            "time": "2026-07-08T07:01:06+00:00"
         },
         {
             "name": "psr/cache",
@@ -1501,16 +1491,16 @@
         },
         {
             "name": "ray/aop",
-            "version": "2.19.1",
+            "version": "2.20.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.Aop.git",
-                "reference": "e93080580fdda3497c329fb438d72737c1f2b354"
+                "reference": "6fa85865b88cdcc262402e5fff5a886ad9287330"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.Aop/zipball/e93080580fdda3497c329fb438d72737c1f2b354",
-                "reference": "e93080580fdda3497c329fb438d72737c1f2b354",
+                "url": "https://api.github.com/repos/ray-di/Ray.Aop/zipball/6fa85865b88cdcc262402e5fff5a886ad9287330",
+                "reference": "6fa85865b88cdcc262402e5fff5a886ad9287330",
                 "shasum": ""
             },
             "require": {
@@ -1520,8 +1510,7 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "infection/infection": "^0.31.9",
-                "phpunit/phpunit": "^10.5.0",
-                "symfony/string": "^7.2"
+                "phpunit/phpunit": "^10.5.0"
             },
             "suggest": {
                 "ray/di": "A dependency injection framework"
@@ -1558,7 +1547,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ray-di/Ray.Aop/issues",
-                "source": "https://github.com/ray-di/Ray.Aop/tree/2.19.1"
+                "source": "https://github.com/ray-di/Ray.Aop/tree/2.20.1"
             },
             "funding": [
                 {
@@ -1570,20 +1559,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-24T03:12:32+00:00"
+            "time": "2026-08-07T12:03:57+00:00"
         },
         {
             "name": "ray/compiler",
-            "version": "1.13.1",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.Compiler.git",
-                "reference": "9e3a2d03082e21fde81c48ce403b75efbdadcb79"
+                "reference": "741b185c5cfd7993f16f505dd6895f263182873d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.Compiler/zipball/9e3a2d03082e21fde81c48ce403b75efbdadcb79",
-                "reference": "9e3a2d03082e21fde81c48ce403b75efbdadcb79",
+                "url": "https://api.github.com/repos/ray-di/Ray.Compiler/zipball/741b185c5cfd7993f16f505dd6895f263182873d",
+                "reference": "741b185c5cfd7993f16f505dd6895f263182873d",
                 "shasum": ""
             },
             "require": {
@@ -1634,22 +1623,22 @@
             ],
             "support": {
                 "issues": "https://github.com/ray-di/Ray.Compiler/issues",
-                "source": "https://github.com/ray-di/Ray.Compiler/tree/1.13.1"
+                "source": "https://github.com/ray-di/Ray.Compiler/tree/1.16.0"
             },
-            "time": "2025-12-04T08:40:43+00:00"
+            "time": "2026-08-14T08:03:36+00:00"
         },
         {
             "name": "ray/di",
-            "version": "2.20.0",
+            "version": "2.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.Di.git",
-                "reference": "2a03a153559fbdd94544e1741a25972fc2c9947a"
+                "reference": "a762a71bab7fe683e48ee696dd3620a14b586cd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.Di/zipball/2a03a153559fbdd94544e1741a25972fc2c9947a",
-                "reference": "2a03a153559fbdd94544e1741a25972fc2c9947a",
+                "url": "https://api.github.com/repos/ray-di/Ray.Di/zipball/a762a71bab7fe683e48ee696dd3620a14b586cd8",
+                "reference": "a762a71bab7fe683e48ee696dd3620a14b586cd8",
                 "shasum": ""
             },
             "require": {
@@ -1660,11 +1649,11 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4",
                 "ext-pdo": "*",
-                "infection/infection": "*",
-                "phpunit/phpunit": "^9.6.31"
+                "phpunit/phpunit": "^11.0"
             },
             "suggest": {
-                "ray/compiler": "For compiling dependency injection container to improve performance"
+                "ray/compiler": "For compiling dependency injection container to improve performance",
+                "ray/object-visual-grapher": "For visualizing composed bindings and the object graph"
             },
             "type": "library",
             "extra": {
@@ -1698,22 +1687,22 @@
             ],
             "support": {
                 "issues": "https://github.com/ray-di/Ray.Di/issues",
-                "source": "https://github.com/ray-di/Ray.Di/tree/2.20.0"
+                "source": "https://github.com/ray-di/Ray.Di/tree/2.23.0"
             },
-            "time": "2025-12-24T13:12:28+00:00"
+            "time": "2026-08-10T20:12:22+00:00"
         },
         {
             "name": "ray/input-query",
-            "version": "v1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.InputQuery.git",
-                "reference": "9d2954407a861a74e412eb12a5fc44e706ec36a9"
+                "reference": "457d355ba46b3983a54a0c9cb6a8b3cdac770b42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.InputQuery/zipball/9d2954407a861a74e412eb12a5fc44e706ec36a9",
-                "reference": "9d2954407a861a74e412eb12a5fc44e706ec36a9",
+                "url": "https://api.github.com/repos/ray-di/Ray.InputQuery/zipball/457d355ba46b3983a54a0c9cb6a8b3cdac770b42",
+                "reference": "457d355ba46b3983a54a0c9cb6a8b3cdac770b42",
                 "shasum": ""
             },
             "require": {
@@ -1754,36 +1743,39 @@
             "description": "Structured input objects from HTTP",
             "support": {
                 "issues": "https://github.com/ray-di/Ray.InputQuery/issues",
-                "source": "https://github.com/ray-di/Ray.InputQuery/tree/v1.0.0"
+                "source": "https://github.com/ray-di/Ray.InputQuery/tree/1.1.0"
             },
-            "time": "2025-07-16T15:19:01+00:00"
+            "time": "2026-05-02T05:39:06+00:00"
         },
         {
             "name": "ray/object-visual-grapher",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.ObjectGrapher.git",
-                "reference": "f512aef5fc13a41771805c5c0cc4027d09b98c3a"
+                "reference": "56e25c24c0f4f28b166c740a0a46b324252745c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.ObjectGrapher/zipball/f512aef5fc13a41771805c5c0cc4027d09b98c3a",
-                "reference": "f512aef5fc13a41771805c5c0cc4027d09b98c3a",
+                "url": "https://api.github.com/repos/ray-di/Ray.ObjectGrapher/zipball/56e25c24c0f4f28b166c740a0a46b324252745c7",
+                "reference": "56e25c24c0f4f28b166c740a0a46b324252745c7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.0"
+                "php": "^8.2"
             },
             "require-dev": {
                 "bear/package": "^1.9.6",
-                "doctrine/annotations": "^1.8",
-                "friendsofphp/php-cs-fixer": "^2.11",
+                "bear/query-repository": "^1.13",
+                "bear/resource": "^1.27.0",
+                "bear/sunday": "^1.8.0",
+                "doctrine/coding-standard": "^14.0",
                 "phpmd/phpmd": "^2.6",
-                "phpstan/phpstan": "^0.12.5",
-                "phpunit/phpunit": "^8.5",
-                "ray/di": "^2.10|2.x-dev",
-                "squizlabs/php_codesniffer": "^3.2"
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^10.5",
+                "ray/di": "^2.19.0|2.x-dev",
+                "slevomat/coding-standard": "^8.15",
+                "squizlabs/php_codesniffer": "^4.0"
             },
             "type": "library",
             "autoload": {
@@ -1801,24 +1793,25 @@
                     "email": "akihito.koriyama@gmail.com"
                 }
             ],
+            "description": "A visual graph generator for Ray.Di object dependency graphs",
             "support": {
                 "issues": "https://github.com/ray-di/Ray.ObjectGrapher/issues",
-                "source": "https://github.com/ray-di/Ray.ObjectGrapher/tree/master"
+                "source": "https://github.com/ray-di/Ray.ObjectGrapher/tree/1.1.0"
             },
-            "time": "2020-06-19T19:11:37+00:00"
+            "time": "2026-07-27T00:40:34+00:00"
         },
         {
             "name": "ray/psr-cache-module",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ray-di/Ray.PsrCacheModule.git",
-                "reference": "7443832621679fb5007966c975ef5be1110ea530"
+                "reference": "79bf2600da361e5ae300eda90e3ab1a30d5d0388"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ray-di/Ray.PsrCacheModule/zipball/7443832621679fb5007966c975ef5be1110ea530",
-                "reference": "7443832621679fb5007966c975ef5be1110ea530",
+                "url": "https://api.github.com/repos/ray-di/Ray.PsrCacheModule/zipball/79bf2600da361e5ae300eda90e3ab1a30d5d0388",
+                "reference": "79bf2600da361e5ae300eda90e3ab1a30d5d0388",
                 "shasum": ""
             },
             "require": {
@@ -1864,22 +1857,22 @@
             "description": "PSR-6 PSR-16 cache module for Ray.Di",
             "support": {
                 "issues": "https://github.com/ray-di/Ray.PsrCacheModule/issues",
-                "source": "https://github.com/ray-di/Ray.PsrCacheModule/tree/1.5.1"
+                "source": "https://github.com/ray-di/Ray.PsrCacheModule/tree/1.5.2"
             },
-            "time": "2025-11-10T02:53:42+00:00"
+            "time": "2026-04-25T11:44:49+00:00"
         },
         {
             "name": "rize/uri-template",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rize/UriTemplate.git",
-                "reference": "abb53c8b73a5b6c24e11f49036ab842f560cad33"
+                "reference": "7ad22944daede547b4542e1c977ec4a81aa20832"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rize/UriTemplate/zipball/abb53c8b73a5b6c24e11f49036ab842f560cad33",
-                "reference": "abb53c8b73a5b6c24e11f49036ab842f560cad33",
+                "url": "https://api.github.com/repos/rize/UriTemplate/zipball/7ad22944daede547b4542e1c977ec4a81aa20832",
+                "reference": "7ad22944daede547b4542e1c977ec4a81aa20832",
                 "shasum": ""
             },
             "require": {
@@ -1914,7 +1907,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rize/UriTemplate/issues",
-                "source": "https://github.com/rize/UriTemplate/tree/0.4.1"
+                "source": "https://github.com/rize/UriTemplate/tree/0.4.2"
             },
             "funding": [
                 {
@@ -1930,20 +1923,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2025-12-02T15:19:04+00:00"
+            "time": "2026-05-07T15:30:40+00:00"
         },
         {
             "name": "symfony/cache",
-            "version": "v7.4.5",
+            "version": "v7.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "8dde98d5a4123b53877aca493f9be57b333f14bd"
+                "reference": "f6028442dd1dfa4f88e9c7360d753948d165e938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/8dde98d5a4123b53877aca493f9be57b333f14bd",
-                "reference": "8dde98d5a4123b53877aca493f9be57b333f14bd",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/f6028442dd1dfa4f88e9c7360d753948d165e938",
+                "reference": "f6028442dd1dfa4f88e9c7360d753948d165e938",
                 "shasum": ""
             },
             "require": {
@@ -1957,7 +1950,6 @@
             },
             "conflict": {
                 "doctrine/dbal": "<3.6",
-                "ext-redis": "<6.1",
                 "ext-relay": "<0.12.1",
                 "symfony/dependency-injection": "<6.4",
                 "symfony/http-kernel": "<6.4",
@@ -1969,7 +1961,7 @@
                 "symfony/cache-implementation": "1.1|2.0|3.0"
             },
             "require-dev": {
-                "cache/integration-tests": "dev-master",
+                "cache/integration-tests": "^1.0.3",
                 "doctrine/dbal": "^3.6|^4",
                 "predis/predis": "^1.1|^2.0",
                 "psr/simple-cache": "^1.0|^2.0|^3.0",
@@ -2014,7 +2006,7 @@
                 "psr6"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache/tree/v7.4.5"
+                "source": "https://github.com/symfony/cache/tree/v7.4.17"
             },
             "funding": [
                 {
@@ -2034,20 +2026,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-27T16:16:02+00:00"
+            "time": "2026-08-19T08:28:05+00:00"
         },
         {
             "name": "symfony/cache-contracts",
-            "version": "v3.6.0",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache-contracts.git",
-                "reference": "5d68a57d66910405e5c0b63d6f0af941e66fc868"
+                "reference": "9789738bc19af1106dc54d6afba9a0b467516cf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/5d68a57d66910405e5c0b63d6f0af941e66fc868",
-                "reference": "5d68a57d66910405e5c0b63d6f0af941e66fc868",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/9789738bc19af1106dc54d6afba9a0b467516cf2",
+                "reference": "9789738bc19af1106dc54d6afba9a0b467516cf2",
                 "shasum": ""
             },
             "require": {
@@ -2061,7 +2053,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -2094,7 +2086,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/cache-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -2106,24 +2098,28 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-13T15:25:07+00:00"
+            "time": "2026-06-05T06:23:12+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.6.0",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/f3202fa1b5097b0af062dc978b32ecf63404e31d",
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d",
                 "shasum": ""
             },
             "require": {
@@ -2136,7 +2132,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -2161,7 +2157,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -2173,24 +2169,115 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2026-06-05T06:23:12+00:00"
         },
         {
-            "name": "symfony/polyfill-php83",
-            "version": "v1.33.0",
+            "name": "symfony/polyfill-deepclone",
+            "version": "v1.42.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5"
+                "url": "https://github.com/symfony/polyfill-deepclone.git",
+                "reference": "70ba0627efc68e97ea392843458a2dd9d6dbd156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/17f6f9a6b1735c0f163024d959f700cfbc5155e5",
-                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5",
+                "url": "https://api.github.com/repos/symfony/polyfill-deepclone/zipball/70ba0627efc68e97ea392843458a2dd9d6dbd156",
+                "reference": "70ba0627efc68e97ea392843458a2dd9d6dbd156",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "provide": {
+                "ext-deepclone": "*"
+            },
+            "suggest": {
+                "ext-deepclone": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\DeepClone\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the deepclone extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "deepclone",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-deepclone/tree/v1.42.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-08-07T06:33:24+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php83",
+            "version": "v1.41.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php83.git",
+                "reference": "5ea99087fb99c273a9b9236ed4c31e78b16103c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/5ea99087fb99c273a9b9236ed4c31e78b16103c6",
+                "reference": "5ea99087fb99c273a9b9236ed4c31e78b16103c6",
                 "shasum": ""
             },
             "require": {
@@ -2237,7 +2324,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.41.0"
             },
             "funding": [
                 {
@@ -2257,20 +2344,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-08T02:45:35+00:00"
+            "time": "2026-07-01T12:47:55+00:00"
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.6.1",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43"
+                "reference": "c0a284bab1ed8aa0417e3d69250ab437739563a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/45112560a3ba2d715666a509a0bc9521d10b6c43",
-                "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/c0a284bab1ed8aa0417e3d69250ab437739563a0",
+                "reference": "c0a284bab1ed8aa0417e3d69250ab437739563a0",
                 "shasum": ""
             },
             "require": {
@@ -2288,7 +2375,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -2324,7 +2411,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.6.1"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -2344,24 +2431,26 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-15T11:30:57+00:00"
+            "time": "2026-06-16T09:55:08+00:00"
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v8.0.0",
+            "version": "v8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "7345f46c251f2eb27c7b3ebdb5bb076b3ffcae04"
+                "reference": "b8f7dd85493e8372c7c81a1547caaaf86b9c16d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/7345f46c251f2eb27c7b3ebdb5bb076b3ffcae04",
-                "reference": "7345f46c251f2eb27c7b3ebdb5bb076b3ffcae04",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/b8f7dd85493e8372c7c81a1547caaaf86b9c16d1",
+                "reference": "b8f7dd85493e8372c7c81a1547caaaf86b9c16d1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.4"
+                "php": ">=8.4.1",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/polyfill-deepclone": "^1.40"
             },
             "require-dev": {
                 "symfony/property-access": "^7.4|^8.0",
@@ -2391,11 +2480,12 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Allows exporting any serializable PHP data structure to plain PHP code",
+            "description": "Provides tools to export, instantiate, hydrate, clone and lazy-load PHP objects",
             "homepage": "https://symfony.com",
             "keywords": [
                 "clone",
                 "construct",
+                "deep-clone",
                 "export",
                 "hydrate",
                 "instantiate",
@@ -2404,7 +2494,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v8.0.0"
+                "source": "https://github.com/symfony/var-exporter/tree/v8.1.5"
             },
             "funding": [
                 {
@@ -2424,20 +2514,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T18:53:00+00:00"
+            "time": "2026-08-13T16:11:28+00:00"
         },
         {
             "name": "webmozart/assert",
-            "version": "2.1.2",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "ce6a2f100c404b2d32a1dd1270f9b59ad4f57649"
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/ce6a2f100c404b2d32a1dd1270f9b59ad4f57649",
-                "reference": "ce6a2f100c404b2d32a1dd1270f9b59ad4f57649",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/2ccb7c2e821038c03a3e6e1700c570c158c55f70",
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2543,11 @@
             },
             "type": "library",
             "extra": {
+                "psalm": {
+                    "pluginClass": "Webmozart\\Assert\\PsalmPlugin"
+                },
                 "branch-alias": {
+                    "dev-master": "2.0-dev",
                     "dev-feature/2-0": "2.0-dev"
                 }
             },
@@ -2484,9 +2578,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.1.2"
+                "source": "https://github.com/webmozarts/assert/tree/2.4.1"
             },
-            "time": "2026-01-13T14:02:24+00:00"
+            "time": "2026-06-15T15:31:57+00:00"
         }
     ],
     "packages-dev": [
@@ -2552,20 +2646,19 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.7.0",
+            "version": "v5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82"
+                "reference": "044a6a392ff8ad0d61f14370a5fbbd0a0107152f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dca41cd15c2ac9d055ad70dbfd011130757d1f82",
-                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/044a6a392ff8ad0d61f14370a5fbbd0a0107152f",
+                "reference": "044a6a392ff8ad0d61f14370a5fbbd0a0107152f",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "php": ">=7.4"
@@ -2604,9 +2697,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.7.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.8.0"
             },
-            "time": "2025-12-06T11:56:16+00:00"
+            "time": "2026-07-04T14:30:18+00:00"
         },
         {
             "name": "phar-io/manifest",
