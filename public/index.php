@@ -22,7 +22,7 @@ use const PHP_URL_PATH;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-$context = getenv('CONTEXT') ?: (PHP_SAPI === 'cli' ? 'cli-hal-app' : 'hal-app');
+$context = getenv('CONTEXT') ?: (PHP_SAPI === 'cli' ? 'cli-html-app' : 'html-app');
 
 // GitHub Pages serves the app under a subpath (e.g. /wasm-todo). Strip it so
 // BEAR's router sees the resource path, not the deployment prefix.

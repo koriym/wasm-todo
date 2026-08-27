@@ -1,4 +1,4 @@
-<phpunit bootstrap="tests/bootstrap.php">
+<phpunit bootstrap="tests/bootstrap.php" failOnWarning="true">
     <testsuites>
         <testsuite name="wasm-todo test suite">
             <directory suffix="Test.php">tests</directory>

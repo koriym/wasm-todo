@@ -6,6 +6,7 @@ namespace WasmTodo\App\Module;
 
 use BEAR\Package\Context\ProdModule as PackageProdModule;
 use BEAR\Package\Module\ReadOnlyAppModule;
+use BEAR\QiqModule\QiqProdModule;
 use Ray\Di\AbstractModule;
 
 class ProdModule extends AbstractModule
@@ -14,5 +15,6 @@ class ProdModule extends AbstractModule
     {
         $this->install(new PackageProdModule());
         $this->install(new ReadOnlyAppModule());
+        $this->install(new QiqProdModule());
     }
 }

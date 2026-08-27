@@ -1,3 +1,11 @@
+{{ /* Inlined, not linked: the phar serves every request through PHP and has no route for a static file. */ }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todos</title>
+<style>
 :root {
     color-scheme: light dark;
     --bg: #f5f5f2;
@@ -94,8 +102,9 @@ ul:empty::before {
     color: var(--muted);
 }
 
-s {
+li a.done {
     color: var(--muted);
+    text-decoration-line: line-through;
 }
 
 p {
@@ -192,12 +201,20 @@ button:active {
     transform: translateY(1px);
 }
 
-form:has(input[name='_method'][value='delete']) button {
+button.danger {
     color: var(--danger);
     background: transparent;
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--danger) 45%, transparent);
 }
 
-form:has(input[name='_method'][value='delete']) button:hover {
+button.danger:hover {
     background: color-mix(in srgb, var(--danger) 8%, transparent);
 }
+</style>
+</head>
+<body>
+<main>
+{{= getContent() }}
+</main>
+</body>
+</html>

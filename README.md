@@ -6,7 +6,7 @@ A todo app built with [BEAR.Sunday](https://bearsunday.github.io/) that runs ent
 
 - A BEAR.Sunday application compiled to a single immutable `app.phar`.
 - The phar boots in `php-cgi-wasm` inside a service worker and serves HTTP from the browser.
-- Resources render HTML with real hyperlinks: `_links` become `<a>` and `<form>`.
+- Resources render HTML through Qiq templates; `#[Link]` declares the affordances, the templates own the markup.
 - State persists in SQLite (`pdo_sqlite`) inside the wasm virtual filesystem, backed by IndexedDB.
 
 The point is not the todo app. It is that a PHP developer can ship a working web app as one file, with no JavaScript to write and no server to run.
@@ -60,8 +60,9 @@ browser ──fetch──> service worker ──> PhpCgiWorker ──> app.phar 
 ```
 
 - `app.phar` is written to the wasm virtual filesystem as `/index.php` during the worker's install event.
-- `CONTEXT=prod-html-app` selects the `HtmlModule`, which binds `RenderInterface` to `HtmlRenderer`.
-- `HtmlRenderer` turns HAL `_links` into HTML: `get` links become `<a>`, `post`/`put`/`delete` links become `<form>` with a `_method` override field.
+- `CONTEXT=prod-html-app` selects `HtmlModule`, which installs `QiqModule` over `var/qiq/template`.
+- `QiqProdModule` compiles the templates at build time into `var/build/prod-html-app/qiq`, and production renders from there — nothing writes at runtime, so the read-only phar serves them as they were packed.
+- Page resources implement `onGet` and `onPost` only. State transitions are their own resources (`todo/toggle`, `todo/delete`), so no form needs a `_method` override.
 - `TodoRepository` stores todos in `/persist/todo.db` via `pdo_sqlite`; `/persist` is the wasm filesystem mount backed by IndexedDB, so state survives reloads.
 - The worker derives its base path from its own URL, so the same bundle works at any subpath (e.g. `/wasm-todo/` on GitHub Pages).
 
@@ -70,8 +71,9 @@ browser ──fetch──> service worker ──> PhpCgiWorker ──> app.phar 
 ```
 src/
   Module/            AppModule, ProdModule, HtmlModule, App
-  Provide/           HtmlRenderer, TodoRepository
-  Resource/Page/     Todos, Todo
+  Provide/           TodoRepository
+  Resource/Page/     Todos, Todo, Todo/Toggle, Todo/Delete
+var/qiq/template/    Page/Todos, Page/Todo, layout/base
 public/index.php     entry point
 bin/compile.php      phar build
 wasm/

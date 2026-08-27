@@ -44,15 +44,16 @@ r = await req('GET', '/todos');
 if (!r.text.includes('<a href="todo?id=1">Buy milk</a>')) throw new Error('list link missing');
 
 r = await req('GET', '/todo?id=1');
-if (!r.text.includes('status:</strong> pending')) throw new Error('detail pending missing');
+if (!r.text.includes('status</strong> pending')) throw new Error('detail pending missing');
+if (r.text.includes('_method')) throw new Error('detail page still tunnels a method');
 
-r = await req('POST', '/todo', '_method=put&id=1');
+r = await req('POST', '/todo/toggle', 'id=1');
 if (r.res.status !== 303) throw new Error('toggle failed');
 
 r = await req('GET', '/todo?id=1');
-if (!r.text.includes('status:</strong> done')) throw new Error('detail done missing');
+if (!r.text.includes('status</strong> done')) throw new Error('detail done missing');
 
-r = await req('POST', '/todo', '_method=delete&id=1');
+r = await req('POST', '/todo/delete', 'id=1');
 if (r.res.status !== 303) throw new Error('delete failed');
 
 r = await req('GET', '/todos');

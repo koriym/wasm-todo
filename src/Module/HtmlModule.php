@@ -4,16 +4,15 @@ declare(strict_types=1);
 
 namespace WasmTodo\App\Module;
 
-use BEAR\Resource\RenderInterface;
-use Ray\Di\AbstractModule;
-use WasmTodo\App\Provide\HtmlRenderer;
+use BEAR\Package\AbstractAppModule;
+use BEAR\QiqModule\QiqModule;
 use WasmTodo\App\Provide\TodoRepository;
 
-final class HtmlModule extends AbstractModule
+final class HtmlModule extends AbstractAppModule
 {
     protected function configure(): void
     {
-        $this->bind(RenderInterface::class)->to(HtmlRenderer::class);
+        $this->install(new QiqModule($this->appMeta->appDir . '/var/qiq/template'));
         $this->bind(TodoRepository::class);
     }
 }

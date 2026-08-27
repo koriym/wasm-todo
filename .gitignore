@@ -2,7 +2,8 @@
 /app.phar
 /autoload.php
 /preload.php
-/var/
+/var/*
+!/var/qiq
 /.phpunit.result.cache
 /wasm/node_modules/
 /wasm/persist/
