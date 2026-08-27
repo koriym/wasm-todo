@@ -34,11 +34,17 @@ async function req(method, path, body) {
     return { res, text };
 }
 
+/** A browser resolves Location against the request URL: a route at another depth lands somewhere else. */
+function redirectTarget(path, res) {
+    return new URL(res.headers.get('location'), new URL(path, 'http://localhost/')).pathname;
+}
+
 let r = await req('GET', '/todos');
 if (!r.text.includes('<form action="todos" method="post">')) throw new Error('create form missing');
 
 r = await req('POST', '/todos', 'title=Buy+milk');
-if (r.res.status !== 303 || r.res.headers.get('location') !== 'todo?id=1') throw new Error('create failed');
+if (r.res.status !== 303) throw new Error('create failed');
+if (redirectTarget('/todos', r.res) !== '/todo') throw new Error(`create redirects to ${redirectTarget('/todos', r.res)}`);
 
 r = await req('GET', '/todos');
 if (!r.text.includes('<a href="todo?id=1">Buy milk</a>')) throw new Error('list link missing');
@@ -47,14 +53,16 @@ r = await req('GET', '/todo?id=1');
 if (!r.text.includes('status</strong> pending')) throw new Error('detail pending missing');
 if (r.text.includes('_method')) throw new Error('detail page still tunnels a method');
 
-r = await req('POST', '/todo/toggle', 'id=1');
+r = await req('POST', '/todo-toggle', 'id=1');
 if (r.res.status !== 303) throw new Error('toggle failed');
+if (redirectTarget('/todo-toggle', r.res) !== '/todo') throw new Error(`toggle redirects to ${redirectTarget('/todo-toggle', r.res)}`);
 
 r = await req('GET', '/todo?id=1');
 if (!r.text.includes('status</strong> done')) throw new Error('detail done missing');
 
-r = await req('POST', '/todo/delete', 'id=1');
+r = await req('POST', '/todo-delete', 'id=1');
 if (r.res.status !== 303) throw new Error('delete failed');
+if (redirectTarget('/todo-delete', r.res) !== '/todos') throw new Error(`delete redirects to ${redirectTarget('/todo-delete', r.res)}`);
 
 r = await req('GET', '/todos');
 if (r.text.includes('Buy milk')) throw new Error('delete did not empty list');

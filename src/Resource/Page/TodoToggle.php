@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WasmTodo\App\Resource\Page\Todo;
+namespace WasmTodo\App\Resource\Page;
 
 use BEAR\Resource\ResourceObject;
 use WasmTodo\App\Provide\TodoRepository;
 
-class Delete extends ResourceObject
+class TodoToggle extends ResourceObject
 {
     public function __construct(
         private TodoRepository $todos,
@@ -16,9 +16,10 @@ class Delete extends ResourceObject
 
     public function onPost(int $id): static
     {
-        $this->todos->delete($id);
+        $this->todos->toggle($id);
         $this->code = 303;
-        $this->headers['Location'] = 'todos';
+        $this->headers['Location'] = 'todo?id=' . $id;
+        $this->body = ['id' => $id];
 
         return $this;
     }

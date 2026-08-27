@@ -53,8 +53,8 @@ class TodosTest extends TestCase
         $ro = $this->resource->get('page://self/todo', ['id' => 1]);
         $this->assertSame(200, $ro->code);
         $html = (string) $ro;
-        $this->assertStringContainsString('<form action="todo/toggle" method="post">', $html);
-        $this->assertStringContainsString('<form action="todo/delete" method="post">', $html);
+        $this->assertStringContainsString('<form action="todo-toggle" method="post">', $html);
+        $this->assertStringContainsString('<form action="todo-delete" method="post">', $html);
         $this->assertStringContainsString('status</strong> pending', $html);
     }
 
@@ -76,17 +76,17 @@ class TodosTest extends TestCase
         $created = $this->resource->post('page://self/todos', ['title' => 'Buy milk']);
         $this->assertStringContainsString('<h2>Todos</h2>', (string) $created);
 
-        $toggled = $this->resource->post('page://self/todo/toggle', ['id' => 1]);
+        $toggled = $this->resource->post('page://self/todo-toggle', ['id' => 1]);
         $this->assertStringContainsString('<a href="todo?id=1">Back to the todo</a>', (string) $toggled);
 
-        $deleted = $this->resource->post('page://self/todo/delete', ['id' => 1]);
+        $deleted = $this->resource->post('page://self/todo-delete', ['id' => 1]);
         $this->assertStringContainsString('<a href="todos">Back to list</a>', (string) $deleted);
     }
 
     public function testToggleFlipsStatus(): void
     {
         $this->resource->post('page://self/todos', ['title' => 'Buy milk']);
-        $toggled = $this->resource->post('page://self/todo/toggle', ['id' => 1]);
+        $toggled = $this->resource->post('page://self/todo-toggle', ['id' => 1]);
         $this->assertSame(303, $toggled->code);
         $this->assertSame('todo?id=1', $toggled->headers['Location']);
 
@@ -97,7 +97,7 @@ class TodosTest extends TestCase
     public function testDeleteEmptiesList(): void
     {
         $this->resource->post('page://self/todos', ['title' => 'Buy milk']);
-        $deleted = $this->resource->post('page://self/todo/delete', ['id' => 1]);
+        $deleted = $this->resource->post('page://self/todo-delete', ['id' => 1]);
         $this->assertSame(303, $deleted->code);
         $this->assertSame('todos', $deleted->headers['Location']);
 

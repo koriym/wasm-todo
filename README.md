@@ -62,7 +62,7 @@ browser ──fetch──> service worker ──> PhpCgiWorker ──> app.phar 
 - `app.phar` is written to the wasm virtual filesystem as `/index.php` during the worker's install event.
 - `CONTEXT=prod-html-app` selects `HtmlModule`, which installs `QiqModule` over `var/qiq/template`.
 - `QiqProdModule` compiles the templates at build time into `var/build/prod-html-app/qiq`, and production renders from there — nothing writes at runtime, so the read-only phar serves them as they were packed.
-- Page resources implement `onGet` and `onPost` only. State transitions are their own resources (`todo/toggle`, `todo/delete`), so no form needs a `_method` override.
+- Page resources implement `onGet` and `onPost` only. State transitions are their own resources (`todo-toggle`, `todo-delete`), so no form needs a `_method` override.
 - `TodoRepository` stores todos in `/persist/todo.db` via `pdo_sqlite`; `/persist` is the wasm filesystem mount backed by IndexedDB, so state survives reloads.
 - The worker derives its base path from its own URL, so the same bundle works at any subpath (e.g. `/wasm-todo/` on GitHub Pages).
 

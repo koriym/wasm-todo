@@ -16,8 +16,8 @@ class Todo extends ResourceObject
     }
 
     #[Link(rel: 'todos', href: 'todos', title: 'Back to list')]
-    #[Link(rel: 'toggle', href: 'todo/toggle{?id}', method: 'post', title: 'Toggle done')]
-    #[Link(rel: 'delete', href: 'todo/delete{?id}', method: 'post', title: 'Delete')]
+    #[Link(rel: 'toggle', href: 'todo-toggle{?id}', method: 'post', title: 'Toggle done')]
+    #[Link(rel: 'delete', href: 'todo-delete{?id}', method: 'post', title: 'Delete')]
     public function onGet(int $id): static
     {
         $todo = $this->todos->find($id);
