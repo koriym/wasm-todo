@@ -28,10 +28,10 @@ class Todo extends ResourceObject
             'title' => $todo['title'],
             'status' => $todo['done'] ? 'done' : 'pending',
             '_links' => [
-                'self' => ['href' => '/todo?id=' . $id],
-                'todos' => ['href' => '/todos', 'title' => 'Back to list'],
-                'toggle' => ['href' => '/todo?id=' . $id, 'method' => 'put', 'title' => 'Toggle done'],
-                'delete' => ['href' => '/todo?id=' . $id, 'method' => 'delete', 'title' => 'Delete'],
+                'self' => ['href' => 'todo?id=' . $id],
+                'todos' => ['href' => 'todos', 'title' => 'Back to list'],
+                'toggle' => ['href' => 'todo?id=' . $id, 'method' => 'put', 'title' => 'Toggle done'],
+                'delete' => ['href' => 'todo?id=' . $id, 'method' => 'delete', 'title' => 'Delete'],
             ],
         ];
 
@@ -42,7 +42,7 @@ class Todo extends ResourceObject
     {
         $this->todos->toggle($id);
         $this->code = 303;
-        $this->headers['Location'] = '/todo?id=' . $id;
+        $this->headers['Location'] = 'todo?id=' . $id;
 
         return $this;
     }
@@ -51,7 +51,7 @@ class Todo extends ResourceObject
     {
         $this->todos->delete($id);
         $this->code = 303;
-        $this->headers['Location'] = '/todos';
+        $this->headers['Location'] = 'todos';
 
         return $this;
     }

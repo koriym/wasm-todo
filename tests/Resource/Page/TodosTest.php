@@ -33,7 +33,7 @@ class TodosTest extends TestCase
         $this->assertSame(200, $ro->code);
         $html = (string) $ro;
         $this->assertSame('text/html; charset=utf-8', $ro->headers['Content-Type']);
-        $this->assertStringContainsString('<form action="/todos" method="post">', $html);
+        $this->assertStringContainsString('<form action="todos" method="post">', $html);
         $this->assertStringContainsString('name="_method" value="post"', $html);
     }
 
@@ -41,10 +41,10 @@ class TodosTest extends TestCase
     {
         $created = $this->resource->post('page://self/todos', ['title' => 'Buy milk']);
         $this->assertSame(303, $created->code);
-        $this->assertSame('/todo?id=1', $created->headers['Location']);
+        $this->assertSame('todo?id=1', $created->headers['Location']);
 
         $ro = $this->resource->get('page://self/todos');
-        $this->assertStringContainsString('<a href="/todo?id=1">Buy milk</a>', (string) $ro);
+        $this->assertStringContainsString('<a href="todo?id=1">Buy milk</a>', (string) $ro);
     }
 
     public function testDetailRendersToggleAndDelete(): void

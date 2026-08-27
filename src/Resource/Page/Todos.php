@@ -22,13 +22,13 @@ class Todos extends ResourceObject
         $this->body = [
             'todos' => array_map(
                 static fn (array $todo): array => $todo + [
-                    '_links' => ['self' => ['href' => '/todo?id=' . $todo['id']]],
+                    '_links' => ['self' => ['href' => 'todo?id=' . $todo['id']]],
                 ],
                 $list,
             ),
             '_links' => [
-                'self' => ['href' => '/todos'],
-                'create' => ['href' => '/todos', 'method' => 'post', 'fields' => ['title'], 'title' => 'Add'],
+                'self' => ['href' => 'todos'],
+                'create' => ['href' => 'todos', 'method' => 'post', 'fields' => ['title'], 'title' => 'Add'],
             ],
         ];
 
@@ -39,7 +39,7 @@ class Todos extends ResourceObject
     {
         $id = $this->todos->create($title);
         $this->code = 303;
-        $this->headers['Location'] = '/todo?id=' . $id;
+        $this->headers['Location'] = 'todo?id=' . $id;
 
         return $this;
     }

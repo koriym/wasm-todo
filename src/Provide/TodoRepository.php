@@ -7,6 +7,7 @@ namespace WasmTodo\App\Provide;
 use PDO;
 
 use function array_map;
+use function getenv;
 
 final class TodoRepository
 {
@@ -14,7 +15,8 @@ final class TodoRepository
 
     public function __construct()
     {
-        $this->pdo = new PDO('sqlite:/tmp/todo.db');
+        $db = getenv('TODO_DB') ?: '/tmp/todo.db';
+        $this->pdo = new PDO('sqlite:' . $db);
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->pdo->exec('CREATE TABLE IF NOT EXISTS todos (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, done INTEGER NOT NULL DEFAULT 0)');
     }

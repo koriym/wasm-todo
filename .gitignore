@@ -6,3 +6,4 @@
 /.phpunit.result.cache
 /wasm/node_modules/
 /wasm/persist/
+/wasm/dist/

@@ -6,11 +6,15 @@
   "private": true,
   "scripts": {
     "start": "node server.mjs",
-    "smoke": "node smoke.mjs"
+    "smoke": "node smoke.mjs",
+    "build": "node build.mjs"
   },
   "dependencies": {
     "php-cgi-wasm": "^0.1.0",
     "php-wasm-phar": "^0.1.0",
     "php-wasm-sqlite": "^0.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
   }
 }

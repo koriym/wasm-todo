@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>wasm-todo</title>
+</head>
+<body>
+    <p>Loading…</p>
+    <script>
+        navigator.serviceWorker.register('sw.js', { type: 'module' }).then(async () => {
+            await navigator.serviceWorker.ready;
+            // Wait until this page is controlled (clients.claim) before
+            // navigating, so the app route is served by the worker.
+            if (!navigator.serviceWorker.controller) {
+                await new Promise(resolve => {
+                    navigator.serviceWorker.addEventListener('controllerchange', resolve, { once: true });
+                });
+            }
+            location.replace('./todos');
+        });
+    </script>
+</body>
+</html>
