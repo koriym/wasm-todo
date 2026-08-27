@@ -35,13 +35,13 @@ async function req(method, path, body) {
 }
 
 let r = await req('GET', '/todos');
-if (!r.text.includes('<form action="/todos" method="post">')) throw new Error('create form missing');
+if (!r.text.includes('<form action="todos" method="post">')) throw new Error('create form missing');
 
 r = await req('POST', '/todos', 'title=Buy+milk');
-if (r.res.status !== 303 || r.res.headers.get('location') !== '/todo?id=1') throw new Error('create failed');
+if (r.res.status !== 303 || r.res.headers.get('location') !== 'todo?id=1') throw new Error('create failed');
 
 r = await req('GET', '/todos');
-if (!r.text.includes('<a href="/todo?id=1">Buy milk</a>')) throw new Error('list link missing');
+if (!r.text.includes('<a href="todo?id=1">Buy milk</a>')) throw new Error('list link missing');
 
 r = await req('GET', '/todo?id=1');
 if (!r.text.includes('status:</strong> pending')) throw new Error('detail pending missing');
