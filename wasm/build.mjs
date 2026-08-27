@@ -24,6 +24,9 @@ const wasmName = workerSrc.match(/[a-f0-9]{40}\.wasm/)[0];
 
 const copies = [
     [join(here, 'index.html'), join(dist, 'index.html')],
+    // A static host has no file for an app route, so the same bootstrap answers
+    // its 404 and hands the URL to the worker.
+    [join(here, 'index.html'), join(dist, '404.html')],
     [join(here, '..', 'app.phar'), join(dist, 'app.phar')],
     [join(here, 'node_modules/php-cgi-wasm', wasmName), join(dist, wasmName)],
     [join(here, 'node_modules/php-wasm-phar/php8.5-phar.so'), join(dist, 'php8.5-phar.so')],

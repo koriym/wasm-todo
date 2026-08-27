@@ -32,7 +32,15 @@
                     navigator.serviceWorker.addEventListener('controllerchange', resolve, { once: true });
                 });
             }
-            location.replace('./todos');
+            // This page also answers the host's 404 for an app route, so the
+            // path that was asked for is the path to hand to the worker.
+            if (location.pathname.endsWith('/')) {
+                location.replace('./todos');
+
+                return;
+            }
+
+            location.reload();
         });
     </script>
 </body>
