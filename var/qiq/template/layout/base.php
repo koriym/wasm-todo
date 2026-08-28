@@ -210,11 +210,26 @@ button.danger {
 button.danger:hover {
     background: color-mix(in srgb, var(--danger) 8%, transparent);
 }
+
+footer {
+    max-width: 33rem;
+    margin: -3rem auto 0;
+    padding: 1rem 1.25rem 0;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+footer a {
+    color: var(--muted);
+}
 </style>
 </head>
 <body>
 <main>
 {{= getContent() }}
 </main>
+<footer><a href="https://bearsunday.github.io/" target="_blank" rel="noopener">BEAR.Sunday</a> running in your browser via WebAssembly &mdash; <a href="https://github.com/koriym/wasm-todo" target="_blank" rel="noopener">source</a></footer>
 </body>
 </html>
