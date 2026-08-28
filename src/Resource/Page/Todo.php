@@ -6,7 +6,7 @@ namespace WasmTodo\App\Resource\Page;
 
 use BEAR\Resource\Annotation\Link;
 use BEAR\Resource\ResourceObject;
-use WasmTodo\App\Provide\TodoRepository;
+use WasmTodo\App\Repository\TodoRepository;
 
 class Todo extends ResourceObject
 {

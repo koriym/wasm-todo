@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WasmTodo\App\Provide;
+namespace WasmTodo\App\Repository;
 
 use PDO;
 

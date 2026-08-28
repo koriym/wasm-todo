@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace WasmTodo\App\Resource\Page;
 
 use BEAR\Resource\ResourceObject;
-use WasmTodo\App\Provide\TodoRepository;
+use WasmTodo\App\Repository\TodoRepository;
 
 class TodoDelete extends ResourceObject
 {

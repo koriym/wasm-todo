@@ -6,7 +6,7 @@ namespace WasmTodo\App\Module;
 
 use BEAR\Package\AbstractAppModule;
 use BEAR\QiqModule\QiqModule;
-use WasmTodo\App\Provide\TodoRepository;
+use WasmTodo\App\Repository\TodoRepository;
 
 final class HtmlModule extends AbstractAppModule
 {
