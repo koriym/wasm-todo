@@ -1,5 +1,6 @@
 /vendor/
 /app.phar
+/cli.phar
 /autoload.php
 /preload.php
 /var/*

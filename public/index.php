@@ -24,18 +24,21 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 $context = getenv('CONTEXT') ?: (PHP_SAPI === 'cli' ? 'cli-html-app' : 'html-app');
 
-// GitHub Pages serves the app under a subpath (e.g. /wasm-todo). Strip it so
-// BEAR's router sees the resource path, not the deployment prefix.
-$basePath = getenv('BASE_PATH') ?: '';
-if ($basePath !== '' && ($_SERVER['REQUEST_URI'] === $basePath || str_starts_with($_SERVER['REQUEST_URI'], $basePath . '/'))) {
-    $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($basePath));
-}
+// Only a web request has a URI; the terminal entry is bin/cli.php.
+if (isset($_SERVER['REQUEST_URI'])) {
+    // GitHub Pages serves the app under a subpath (e.g. /wasm-todo). Strip it so
+    // BEAR's router sees the resource path, not the deployment prefix.
+    $basePath = getenv('BASE_PATH') ?: '';
+    if ($basePath !== '' && ($_SERVER['REQUEST_URI'] === $basePath || str_starts_with($_SERVER['REQUEST_URI'], $basePath . '/'))) {
+        $_SERVER['REQUEST_URI'] = substr($_SERVER['REQUEST_URI'], strlen($basePath));
+    }
 
-// The root has no resource; send it to the todo list.
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-if ($path === '/' || $path === '') {
-    header('Location: todos', true, 303);
-    exit;
+    // The root has no resource; send it to the todo list.
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($path === '/' || $path === '') {
+        header('Location: todos', true, 303);
+        exit;
+    }
 }
 
 $app = Injector::getInstance('WasmTodo\App', $context, dirname(__DIR__))->getInstance(AppInterface::class);
