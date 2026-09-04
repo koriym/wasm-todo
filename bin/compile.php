@@ -34,8 +34,8 @@ foreach ($builds as [$context, $entry, $archive]) {
         exit($code);
     }
 
-    if ($archive !== 'app.phar') {
-        rename($appDir . '/app.phar', $appDir . '/' . $archive);
+    if ($archive !== 'app.phar' && ! rename($appDir . '/app.phar', $appDir . '/' . $archive)) {
+        exit(1);
     }
 }
 
