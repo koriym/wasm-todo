@@ -8,6 +8,7 @@ A todo app built with [BEAR.Sunday](https://bearsunday.github.io/) that runs ent
 - The phar boots in `php-cgi-wasm` inside a service worker and serves HTTP from the browser.
 - Resources render HTML through Qiq templates; `#[Link]` declares the affordances, the templates own the markup.
 - State persists in SQLite (`pdo_sqlite`) inside the wasm virtual filesystem, backed by IndexedDB.
+- The same resources answer as HAL from the terminal (`cli.phar`), and with a static PHP they are one executable.
 
 The point is not the todo app. It is that a PHP developer can ship a working web app as one file, with no JavaScript to write and no server to run.
 
@@ -21,10 +22,10 @@ The point is not the todo app. It is that a PHP developer can ship a working web
 
 ```bash
 composer install
-composer compile          # runs bin/compile.php, produces app.phar
+composer compile          # runs bin/compile.php, produces app.phar and cli.phar
 ```
 
-`bin/compile.php` compiles the app for the `prod-html-app` context and packs it into `app.phar`.
+`bin/compile.php` compiles the app twice and packs each build into its own archive, since one archive carries one build: `prod-html-app` into `app.phar` for the browser, `prod-cli-hal-app` into `cli.phar` for the terminal.
 
 ## Run in the browser
 
@@ -43,6 +44,23 @@ The same app runs under PHP's built-in server:
 
 ```bash
 composer serve            # php -S 127.0.0.1:8080 -t public
+```
+
+## Run from the terminal
+
+`cli.phar` carries the same resources with the CLI router and HAL rendering; its entry is `bin/cli.php`.
+
+```bash
+php cli.phar get /todos
+php cli.phar post '/todos?title=milk'
+php cli.phar get '/todo?id=1'
+```
+
+With `micro.sfx` from [static-php-cli](https://static-php.dev), PHP and the archive become one executable that runs on a machine with no PHP installed ([manual](https://bearsunday.github.io/manuals/1.0/en/phar.html#one-executable)):
+
+```bash
+cat micro.sfx cli.phar > todo && chmod +x todo
+./todo get /todos
 ```
 
 ## Test
@@ -71,11 +89,12 @@ browser ──fetch──> service worker ──> PhpCgiWorker ──> app.phar 
 ```
 src/
   Module/            AppModule, ProdModule, HtmlModule, App
-  Provide/           TodoRepository
-  Resource/Page/     Todos, Todo, Todo/Toggle, Todo/Delete
-var/qiq/template/    Page/Todos, Page/Todo, layout/base
-public/index.php     entry point
-bin/compile.php      phar build
+  Repository/        TodoRepository
+  Resource/Page/     Todos, Todo, TodoToggle, TodoDelete
+var/qiq/template/    Page/Todos, Page/Todo, Page/TodoToggle, Page/TodoDelete, layout/base
+public/index.php     browser entry point
+bin/cli.php          terminal entry point
+bin/compile.php      phar build (app.phar and cli.phar)
 wasm/
   sw.js              service worker source
   index.html         registration page

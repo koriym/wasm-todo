@@ -201,16 +201,16 @@
         },
         {
             "name": "bear/qiq-module",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bearsunday/BEAR.QiqModule.git",
-                "reference": "e13cf3e27d64afb98a4034761944369d1f5149ba"
+                "reference": "d84126a51b6cb86f24c9e20bd14c1896fb95efe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bearsunday/BEAR.QiqModule/zipball/e13cf3e27d64afb98a4034761944369d1f5149ba",
-                "reference": "e13cf3e27d64afb98a4034761944369d1f5149ba",
+                "url": "https://api.github.com/repos/bearsunday/BEAR.QiqModule/zipball/d84126a51b6cb86f24c9e20bd14c1896fb95efe1",
+                "reference": "d84126a51b6cb86f24c9e20bd14c1896fb95efe1",
                 "shasum": ""
             },
             "require": {
@@ -228,9 +228,9 @@
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^11.4",
                 "ray/rector-ray": "^1.0",
-                "rector/rector": "^0.14.8"
+                "rector/rector": "^1.2.10"
             },
             "type": "library",
             "autoload": {
@@ -250,9 +250,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bearsunday/BEAR.QiqModule/issues",
-                "source": "https://github.com/bearsunday/BEAR.QiqModule/tree/2.1.0"
+                "source": "https://github.com/bearsunday/BEAR.QiqModule/tree/2.1.2"
             },
-            "time": "2026-08-27T03:52:03+00:00"
+            "time": "2026-09-04T03:02:57+00:00"
         },
         {
             "name": "bear/query-repository",
